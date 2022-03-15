@@ -2,6 +2,8 @@ import Head from 'next/head'
 import Image from 'next/image'
 import CarouselContainer from '../components/Carousel'
 import Feedback from '../components/Feedback'
+import FormAula from '../components/Form'
+import Price from '../components/Price'
 
 export default function Home() {
 	return (
@@ -46,26 +48,34 @@ export default function Home() {
 
 				<div className="w-full h-auto bg-violet-900 p-4 lg:flex lg:justify-center lg:items-center lg:p-12">
 					<div className="w-full h-auto lg:w-1/2 p-4 md:mr-2">
-						<p className="text-xl font-medium xl:text-3xl text-white text-center my-4">Aprender inglês nunca foi tão fácil</p>
-						<p className="text-lg xl:text-xl text-white text-center md:text-lg">Na Cultural Learning você tem a liberdade em aprender no seu tempo e da sua forma.</p>
+						<h1 className="text-center font-bold text-2xl md:text-4xl lg:text-5xl font-heading text-white pb-2">Aprender inglês nunca foi tão fácil</h1>
+						<p className="text-md xl:text-2xl text-white text-center md:text-start md:text-lg">Na Cultural Learning você tem a liberdade em aprender no seu tempo e da sua forma.</p>
 					</div>
 					<div className="w-full h-auto lg:w-1/2 p-4 md:ml-2">
-						<p className="text-xl font-medium xl:text-3xl text-white text-center my-4">Quais os benefícios de estudar online?</p>
-						<div className="flex flex-row justify-center items-center">
-							<p className="text-lg text-center xl:text-2xl text-white px-2">✓ Turmas reduzidas</p>
-							<p className="text-lg text-center xl:text-2xl text-white px-2">✓ Horário flexível</p>
-							<p className="text-lg text-center xl:text-2xl text-white px-2">✓ Aprendizado no seu ritmo</p>
-						</div>
+						<h1 className="text-center font-bold text-2xl md:text-4xl lg:text-5xl font-heading text-white pb-2">Quais os benefícios de estudar online?</h1>
+						<ol className="px-4 py-6 flex justify-center items-center">
+							<li className="text-lg text-start xl:text-2xl text-white px-2">Turmas reduzidas</li>
+							<li className="text-lg text-start xl:text-2xl text-white px-2">Horário flexível</li>
+							<li className="text-lg text-start xl:text-2xl text-white px-2">Aprendizado no seu ritmo</li>
+						</ol>
+					</div>
+				</div>
+
+				<div className="w-full h-full md:py-12">
+					<div className="bg-gray-100 rounded-2xl max-w-7xl mx-auto px-4 sm:px-6 md:px-4 lg:px-12 py-12">
+						<h1 className="text-center font-bold text-2xl md:text-4xl font-heading text-violet-900 pb-2">Agende uma aula demonstrativa 100% gratis!</h1>
+						<FormAula />
 					</div>
 				</div>
 
 
-				{/* <div className="flex flex-col items-center justify-center w-full h-50 md:flex-row md:flex-wrap md:px-12">
-					<Feedback photo="https://picsum.photos/256/256" name="Victor Camargo" comment="Melhor escola que conheci na vida! Professores altamente qualificados recomendo demais." />
-					<Feedback photo="https://picsum.photos/256/256" name="Suzana Vieira" comment="Eu nunca soube falar nada em inglês, depois que conheci a cultural learning eu falo tudo e mais um pouco!!" />
-					<Feedback photo="https://picsum.photos/256/256" name="Patrick de Paula" comment="Faço inglês online com meus amigos e gostamos muito, aula 100% online é a melhor coisa que ja me aconteceu" />
-					<Feedback photo="https://picsum.photos/256/256" name="Paula Mendes" comment="Gosto muito como funcionam as aulas online, não preciso sair de casa e nem depender de turmas para avançar" />
-				</div> */}
+				<div>
+					<Feedback />
+				</div>
+
+				<div className="w-full h-full">
+					<Price />
+				</div>
 			</main>
 		</>
 	)
